@@ -1,6 +1,6 @@
 module.exports = require('cqrs-domain').defineEvent({
-  name: 'productCreated'
+  name: 'productCreated',
 },
-function (data, aggregate) {
+(data, aggregate) => {
   aggregate.set(data);
 });

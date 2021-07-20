@@ -13,8 +13,8 @@ module.exports = {
   },
   revisionGuardStore: {
     queueTimeout: 1000, // optional, timeout for non-handled events in the internal in-memory queue
-    queueTimeoutMaxLoops: 3, // optional, maximal loop count for non-handled event in the internal in-memory queue
-
+    // optional, maximal loop count for non-handled event in the internal in-memory queue
+    queueTimeoutMaxLoops: 3,
     type: 'redis',
     host: 'localhost', // optional
     port: 6379, // optional

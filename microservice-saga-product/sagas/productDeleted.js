@@ -11,14 +11,14 @@ module.exports = require('cqrs-saga').defineSaga({
   ordersRepo.findViewModels({ 'products.id': productId }, (err, orders) => {
     orders.forEach((entry) => {
       const cmd = {
-		  command: 'deleteOrder',
-		  aggregate: {
+        command: 'deleteOrder',
+        aggregate: {
           name: 'order',
-		  },
-		  payload: {
+        },
+        payload: {
           id: entry.id,
-		  },
-		  meta: evt.meta,
+        },
+        meta: evt.meta,
       };
 
       saga.addCommandToSend(cmd);

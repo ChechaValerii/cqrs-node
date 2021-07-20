@@ -1,5 +1,5 @@
 module.exports = require('cqrs-domain').defineCommand({
-  name: 'changeProduct'
-}, function (data, aggregate) {
+  name: 'changeProduct',
+}, (data, aggregate) => {
   aggregate.apply('productChanged', data);
 });
